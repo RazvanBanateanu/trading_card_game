@@ -11,13 +11,13 @@ app = Flask(__name__)
 
 # Initialize necessary objects
 contract = Address.new_from_bech32("erd1qqqqqqqqqqqqqpgqrqz7r8yl5dav2z0fgnn302l2w7xynygruvaq76m26j")
-razvan = Address.new_from_bech32("erd13c9vzmjfpwfl8lm4u7pdlu30uer0a7y2swklj7lra7kxkn36fpkstqmtsw")
-signer = UserSigner.from_pem_file(Path("./lastwallet.pem"))
+razvan = Address.new_from_bech32("erd1a9fe2vjvfu7rks7v89289p36v2mwzduc0ltkvyyz9uw5uyfu9zpsjn2xze")
+signer = UserSigner.from_pem_file(Path("./wallet.pem"))
 config = TransactionsFactoryConfig(chain_id="D")
 provider = ProxyNetworkProvider("https://devnet-api.multiversx.com/")
 transaction_computer = TransactionComputer()
 query_runner = QueryRunnerAdapter(ProxyNetworkProvider("https://devnet-api.multiversx.com/"))
-abi = Abi.load(Path("/home/ubuntu/bpda/tema-1/output/tema-1.abi.json"))
+abi = Abi.load(Path("./tema-1.abi.json"))
 query_controller = SmartContractQueriesController(query_runner, abi)
 factory = SmartContractTransactionsFactory(config)
 

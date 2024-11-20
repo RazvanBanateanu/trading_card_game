@@ -86,7 +86,7 @@ Response Example:
   "supply": 55
 }
 
-POST /exchange-nft - Exchange NFTs
+6. POST /exchange-nft - Exchange NFTs
 
 Description: Allows users to exchange NFTs by providing nft_index and token_nonce in the request. The exchange will occur if the transaction is successful. 
  - "nft_index" : The nonce of the NTF that the user is trying to trade with from the contract's supply.

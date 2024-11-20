@@ -1,3 +1,5 @@
+TRADING CARD GAME
+
 Setup
 
 1. Install required packages
